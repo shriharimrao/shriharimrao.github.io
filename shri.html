@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrihari M Rao - Data Analyst | Consultant | Portfolio</title>
+    <style>
+        :root {
+            --primary: #667eea; --secondary: #764ba2; --accent: #ff6b6b;
+            --bg: #f8f9fa; --card-bg: white; --text: #333; --dark-bg: #1a1a2e;
+        }
+        [data-theme="dark"] {
+            --bg: #121212; --card-bg: #1e1e1e; --text: #e0e0e0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); transition: all 0.3s; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: rgba(26,26,46,0.95); backdrop-filter: blur(10px); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        header h1 { margin: 0; }
+        #theme-toggle { position: absolute; top: 1rem; right: 2rem; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        nav { background: rgba(22,33,62,0.95); padding: 1rem; margin-top: 4rem; }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav li { margin: 0 1rem; }
+        nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+        section { padding: 100px 0; opacity: 0; transform: translateY(50px); transition: all 0.8s ease; }
+        section.animate { opacity: 1; transform: translateY(0); }
+        #hero { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center; position: relative; overflow: hidden; }
+        #particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+        .particle { position: absolute; background: rgba(255,255,255,0.5); border-radius: 50%; animation: float 6s infinite linear; }
+        @keyframes float { 0% { transform: translateY(100vh) scale(0); opacity: 1; } 100% { transform: translateY(-100px) scale(1); opacity: 0; } }
+        #hero h2 { font-size: 3.5rem; margin-bottom: 1rem; }
+        #hero p { font-size: 1.3rem; margin-bottom: 2rem; }
+        .btn { background: var(--accent); color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; transition: all 0.3s; box-shadow: 0 5px 15px rgba(255,107,107,0.4); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(255,107,107,0.6); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: var(--card-bg); padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; transition: all 0.4s; transform-style: preserve-3d; }
+        .card:hover { transform: rotateY(10deg) rotateX(10deg) translateZ(20px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        .card .back { transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 2.5rem; border-radius: 20px; backface-visibility: hidden; }
+        .skill-bar { background: #e0e0e0; height: 10px; border-radius: 5px; margin: 1rem 0; overflow: hidden; }
+        .skill-progress { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 5px; width: 0%; transition: width 2s ease; }
+        footer { background: var(--dark-bg); color: white; text-align: center; padding: 3rem 0; }
+        .contact-form { max-width: 600px; margin: 0 auto; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 1rem; margin: 1rem 0; border: 1px solid #ddd; border-radius: 10px; background: var(--card-bg); color: var(--text); }
+        .contact-form button { width: 100%; }
+        @media (max-width: 768px) { #hero h2 { font-size: 2.5rem; } nav ul { flex-direction: column; } }
+    </style>
+</head>
+<body data-theme="light">
+    <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+    
+    <header>
+        <div class="container">
+            <h1>Shrihari M Rao</h1>
+            <p>Associate Consultant | Business Analyst | Operations Analyst</p>
+        </div>
+    </header>
+    
+    <nav id="navbar">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <div id="particles"></div>
+        <div class="container">
+            <h2>Turning Data into Business Impact</h2>
+            <p>1+ Year Experience | SQL, Python, Power BI | Market Research & Consulting</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">About Me</h2>
+            <p style="max-width: 800px; margin: 0 auto 3rem; text-align: center; font-size: 1.1rem;">
+                Results-driven Data Analyst with 1+ year at Arnifi, delivering insights for 20+ B2B clients. B.Tech REVA University (9.1 CGPA). Targeting Junior Consultant/Business Analyst roles.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <a href="https://linkedin.com/in/shriharimrao" class="btn" target="_blank">LinkedIn</a>
+                <a href="https://github.com/shriharimrao" class="btn" target="_blank">GitHub</a>
+                <a href="#" class="btn" onclick="window.print()">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Technical Skills</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Python & SQL</h3>
+                    <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
+                    <p>Pandas, NumPy, Data Cleaning</p>
+                </div>
+                <div class="card">
+                    <h3>Power BI</h3>
+                    <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                    <p>Dashboards & Visualization</p>
+                </div>
+                <div class="card">
+                    <h3>Business Analytics</h3>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                    <p>Market Research, Proposals</p>
+                </div>
+                <div class="card">
+                    <h3>Excel Advanced</h3>
+                    <div class="skill-bar"><div class="skill-progress" data-width="92%"></div></div>
+                    <p>PivotTables, Formulas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Experience</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Arnifi - Business Consultant</h3>
+                    <p>Bengaluru | 1 Year</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>Market research for 20+ clients (30% faster analysis)</li>
+                        <li>10+ proposals & pitch decks</li>
+                        <li>Power BI insights for founders</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Featured Projects</h2>
+            <div class="grid">
+                <div class="project-card card">
+                    <img src="https://via.placeholder.com/400x200/667eea/ffffff?text=RoBERTa" alt="RoBERTa">
+                    <h3>Sentiment Analysis (RoBERTa)</h3>
+                    <p>92% accuracy on 5K+ reviews</p>
+                    <a href="https://github.com/shriharimrao" class="btn">View Code</a>
+                </div>
+                <div class="project-card card">
+                    <img src="https://via.placeholder.com/400x200/764ba2/ffffff?text=JARVIS" alt="JARVIS">
+                    <h3>JARVIS Virtual Assistant</h3>
+                    <p>Python task automation</p>
+                    <a href="https://github.com/shriharimrao" class="btn">View Code</a>
+                </div>
+                <div class="project-card card">
+                    <img src="https://via.placeholder.com/400x200/ff6b6b/ffffff?text=Vaktrix" alt="Vaktrix">
+                    <h3>Vaktrix Voice IR Remote</h3>
+                    <p>Accessibility tech</p>
+                    <a href="https://github.com/shriharimrao" class="btn">View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Get In Touch</h2>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Shrihari M Rao | shriharimrao@gmail.com | +91-7483812109</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Theme toggle
+        function toggleTheme() {
+            const body = document.body;
+            body.dataset.theme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+            document.getElementById('theme-toggle').textContent = body.dataset.theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // Scroll animations
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('animate');
+            });
+        });
+        document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+
+        // Animate skill bars
+        const animateSkills = () => {
+            document.querySelectorAll('.skill-progress').forEach(bar => {
+                bar.style.width = bar.dataset.width;
+            });
+        };
+        window.addEventListener('scroll', () => {
+            if (document.getElementById('skills').getBoundingClientRect().top < window.innerHeight) animateSkills();
+        });
+
+        // Particles
+        function createParticles() {
+            const particles = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particles.appendChild(particle);
+            }
+        }
+        createParticles();
+
+        // Contact form
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Thanks! Message sent: ' + e.target.querySelector('textarea').value);
+            e.target.reset();
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').style.transform = window.scrollY > 100 ? 'translateY(0)' : 'translateY(-100%)';
+        });
+    </script>
+</body>
+</html>
